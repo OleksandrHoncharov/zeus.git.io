@@ -1,0 +1,327 @@
+/*------------------------------------------------------------------
+  	[HEADER]
+------------------------------------------------------------------*/
+
+/*base*/
+
+.block-hr {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+	
+  .block-hr-bg { 
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+    background: url(../img/divider-big.png) no-repeat center;
+    height: 6px; 
+  }
+}
+
+
+
+
+
+/*---------------HEADER-------------*/
+
+header {
+  height: 100%;
+  position: relative;
+  background: #080809;
+  @include cover-bg("../img/bg-header/bg_header.png");
+  .header-main {
+    padding: 150px 0px 350px 0px;
+    p {
+      padding: 10px 0px 50px 0px; 
+      font-size: 19px;
+      line-height: 1.4;
+    }
+  }
+  .header-menu__bot {
+    margin: 0px auto;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+    color: white;
+		-webkit-perspective: 150px;
+		perspective: 150px;
+		-webkit-perspective-origin: 50% 50%;
+		perspective-origin: 50% 50%;
+    .navbar-nav {
+			position: relative;
+			.nav-item {
+				padding: 5px 0px;
+				.nav-link {
+					color: #fff;
+					font-size: 0.875rem;
+					text-transform: uppercase;
+					margin-right: 40px;
+					@include transition(all, 1s, ease, 0s);
+					&:hover {
+						color: #998349;
+					}
+				}
+			}
+      .nav-item:last-child {
+        .nav-link {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+  .header-menu__bot:before {
+    background: #1d1d1d;
+    content: "";
+    position: absolute;
+    top: 15px; 
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    border: 1px solid #f2e9a6;
+    border-radius: 5px;
+    -o-border-image: linear-gradient(to bottom, #f2e9a6 0%, #998349 100%);
+    border-image: -webkit-gradient(linear, left top, left bottom, from(#f2e9a6), to(#998349));
+    border-image: linear-gradient(to bottom, #f2e9a6 0%, #998349 100%);
+    border-image-slice: 1;
+    -webkit-transform: rotateX(30deg);
+		transform: rotateX(30deg);
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		backface-visibility: visible;
+  }
+}
+
+.nav {
+  padding: .1rem 1rem;
+  .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+
+  }
+}
+
+/*--------------HEADER END----------*/
+
+/*menu*/
+
+.cf::before,
+.cf::after {
+  content: " ";
+  display: table;
+}
+
+.cf::after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0px auto;
+  width: 100%;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+	padding-right: 15px;
+	.navbar-brand {
+		padding-top: 20px; 
+	}
+	.menu-item__left {
+		background: #491409;
+		float: left;
+		position: relative;
+		-webkit-transform: skewX(25deg);
+		transform: skewX(25deg);
+		margin-right: 5px;
+		a {
+			-webkit-transform: skewX(-25deg);
+			transform: skewX(-25deg);
+			padding: 1em 2em;
+		}
+	}
+	.menu-item__right {
+		background: #491409;
+		float: left;
+		position: relative;
+		-webkit-transform: skewX(-25deg);
+		transform: skewX(-25deg);
+		margin-left: 5px;
+		a {
+			-webkit-transform: skewX(25deg);
+			transform: skewX(25deg);
+			padding: 1em 2em;
+		}
+	}
+	a {
+		display: block;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		font-family: Arial, Helvetica;
+		font-size: 0.875rem;
+		img {
+			padding: 0px 30px;
+		}
+	}
+	li:hover {
+		background: #e74c3c;
+	}
+}
+
+
+/* Dropdown */
+
+.submenu-left {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  -webkit-transform: skewX(-25deg);
+  -webkit-transform-origin: left top;
+}
+
+.submenu-right {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  -webkit-transform: skewX(25deg);
+  -webkit-transform-origin: left top;
+}
+
+.submenu {
+	li {
+		background-color: #491409;
+		position: relative;
+		overflow: hidden;
+		a {
+			padding: 1em 2em;
+		}
+	}
+	li::after {
+		content: '';
+		position: absolute;
+		top: -125%;
+		height: 100%;
+		width: 100%;
+		-webkit-box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+		box-shadow: 0 0 50px rgba(0, 0, 0, .9);
+	}
+}
+
+/* Odd stuff */
+
+.submenu > li:nth-child(odd) { -webkit-transform: skewX(-25deg) translateX(0); }
+.submenu > li:nth-child(odd) > a { -webkit-transform: skewX(25deg); }
+.submenu > li:nth-child(odd)::after { right: -50%; -webkit-transform: skewX(-25deg) rotate(3deg); }
+
+/* Even stuff */
+
+.submenu > li:nth-child(even) { -webkit-transform: skewX(25deg) translateX(0); }
+.submenu > li:nth-child(even) > a { -webkit-transform: skewX(-25deg); }
+.submenu > li:nth-child(even)::after { left: -50%; -webkit-transform: skewX(25deg) rotate(3deg); }
+
+/* Show dropdown */
+
+.submenu,
+.submenu {
+  opacity: 0;
+  visibility: hidden;
+	li {
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transition: .2s ease -webkit-transform;
+		transition: .2s ease -webkit-transform;
+	}
+}
+
+.menu > li:hover .submenu,
+.menu > li:hover .submenu li {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu > li:hover .submenu li:nth-child(even) { -webkit-transform: skewX(25deg) translateX(15px); }
+.menu > li:hover .submenu li:nth-child(odd) { -webkit-transform: skewX(-25deg) translateX(-15px); }
+
+/*-----MENU-SMALL-SCREEN------*/
+
+.menu-small__screen {
+	.navbar-nav {
+		position: relative;
+		.dropdown-menu {
+			background: #ccc;
+			li {
+				padding: 10px 0;
+				a {
+					font-size: 1rem;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	a {
+		font-size: 1rem;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: 700; 
+		padding: 10px; 
+		@include transition(all, 1s, ease, 0s); 
+		&:hover {
+			color: #998349;
+		}
+	}
+}
+
+
+
+@media only screen and (max-width: 1230px) {
+	.menu {
+		a {
+			font-size: 0.5rem; 
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	
+}
+
+@media only screen and (max-width: 768px) {
+	header .header-menu__bot .navbar-nav .nav-item .nav-link {
+		margin-right: 10px;
+	}
+	header .header-main {
+    padding: 150px 0px 150px 0px;
+	}
+}
+
+
+@media only screen and (max-width: 480px) {
+	
+}

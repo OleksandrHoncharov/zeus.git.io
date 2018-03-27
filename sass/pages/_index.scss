@@ -1,0 +1,207 @@
+/*----SECTION-ABOUT----*/
+
+.section-about {
+	h3 {
+		font-size: 1rem;
+		text-transform: uppercase;
+		padding: 20px 0px;
+	}
+	.section-about__top {
+		margin-bottom: 100px;
+	}
+	.section-about__bottom {
+		margin-bottom: 100px;
+		p {
+			font-size: 1rem;
+		}
+		.section-about__img-box {
+			width: 100%;
+			height: 100%;
+			background: #eee;
+			border: 2px solid #998349;
+			border-radius: 5px;
+			-o-border-image: linear-gradient(to bottom, #f2e9a6 0%, #998349 100%);
+			border-image: -webkit-gradient(linear, left top, left bottom, from(#f2e9a6), to(#998349));
+			border-image: linear-gradient(to bottom, #f2e9a6 0%, #998349 100%);
+			border-image-slice: 1;
+			.section-about__img-first {
+				background: url(../img/barbershop/barbershop-1.jpg) no-repeat center;
+				background-size: cover;
+				min-height: 250px; 
+				width: 100%;
+			}
+			.section-about__img-second {
+				background: url(../img/barbershop/barbershop-2.jpg) no-repeat center;
+				background-size: cover;
+				min-height: 250px; 
+				width: 100%;
+			}
+		}
+	}
+}
+
+.par-info {
+	font-size: 0.875rem;
+	color: #fff;
+	line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+	.section-about {
+		.section-about__top {
+			margin-bottom: 10px;
+			.section-about__brand {
+				padding: 30px 0; 
+			}
+		}
+	}
+	
+}
+
+/*----SECTION-SERVES----*/
+
+.section-serves {
+	margin-bottom: 50px;
+	.serves-gold__price {
+		color: $gold-color;
+	}
+	p {
+		min-width: 80%;
+		font-size: 1.125rem;
+	}
+}
+
+
+
+/*----SECTION-MASTER----*/
+
+.section-master {
+	margin-bottom: 50px;
+	.section-master__photo { 
+		height: 100%;
+		width: 100%;
+		img {
+			width: 430px;
+			height: 410px;
+			padding-left: 20px;
+		}
+	}
+	.section-master__info {
+		.master-info__title {
+			color: $gold-color;
+			font-size: 2rem;
+			padding: 40px 0px 20px 0px;
+			text-transform: uppercase;
+		}
+		.master-info__main {
+			color: #fff;
+			font-size: 0.875rem;
+			line-height: 1.5;
+		}
+		.master-info__skills {
+			margin: 15px 0;
+			span {
+				font-size: 1.2rem;
+				margin-left: 10px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.section-master {
+		margin-bottom: 50px;
+		.section-master__photo {
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			img {
+				width: 430px;
+				min-height: 410px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 480px) {
+	.section-master {
+		.section-master__photo {
+			img {
+				width: 330px;
+				min-height: 310px;
+			}
+		}
+	}
+}
+
+/*----SECTION-MEDIA----*/
+
+.section-media {
+	padding-bottom: 20px;
+	.section-media__text {
+		font-size: 0.875rem;
+		color: $main-color;
+		line-height: 1.3;
+		padding-bottom: 5px;
+	}
+	.section-media__link {
+		text-decoration: underline;
+		font-size: 0.875rem;
+		font-family: 'Georgia', serif;
+		color: $gold-color;
+		@include transition(all, 1s, ease, 0s);
+		&:hover {
+			color: #998349;
+		}
+	}
+}
+
+.media-block__news {
+	margin-bottom: 50px;
+	.media-block__news-title {
+		font-size: 1rem;
+		font-family: 'Georgia', serif;
+		text-transform: uppercase;
+		color: $gold-color;
+		padding: 10px 0px;
+	}
+	.block-img {
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.media-block__video {
+	.block-iframe {
+		max-width: 409px;
+		border: 2px solid #998349;
+		border-radius: 5px;
+		-o-border-image: linear-gradient(to bottom, #f2e9a6 0%, #998349 100%);
+		border-image: -webkit-gradient(linear, left top, left bottom, from(#f2e9a6), to(#998349));
+		border-image: linear-gradient(to bottom, #f2e9a6 0%, #998349 100%);
+		border-image-slice: 1;
+	}
+}
+
+.media-block__social {
+	.media-block__title {
+		font-size: 1.5rem;
+		font-weight: 500;
+	}
+	a {
+		margin-right: 10px;
+		text-decoration: none;
+		color: $main-color;
+		@include transition(all, 1s, ease, 0s);
+		&:hover {
+			color: #998349;
+		}
+		img {
+			vertical-align: sub;
+			padding-right: 5px;
+		}
+	}
+}
+
+
+
